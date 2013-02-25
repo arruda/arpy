@@ -7,7 +7,7 @@ Idea:
 -----
 
 Make a web app that sends a post message to the serial port where the arduino is connected and
-the arduino shows this message in a Small Display(don't know what's the component name...)
+the arduino shows this message in a Small LCD Display
 
 
 Done So far:
