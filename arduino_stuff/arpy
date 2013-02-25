@@ -1,0 +1,45 @@
+int LED = 9;
+void setup() {
+    Serial.begin(9600);
+    pinMode(LED, OUTPUT);
+}
+
+String getEntradaSerial(){
+  String content = "";
+  char character;
+
+  while(Serial.available()) {
+      character = Serial.read();
+      //Serial.println(character);
+      content.concat(character);
+  }
+  return content;
+
+}
+
+void ligarLED(){
+  analogWrite(LED, 255);    
+}
+
+void desligarLED(){
+  analogWrite(LED, 0);    
+}
+
+void verificaCmd(String cmd){
+  if( cmd.equals("ON") ){
+    ligarLED();
+  }
+  else if( cmd.equals("OFF") ){
+    desligarLED();
+  }
+  else if( cmd.equals("") ){
+    return;
+  }
+  Serial.println(cmd);
+}
+
+void loop()
+{
+  verificaCmd(getEntradaSerial());
+  delay(500);
+}
