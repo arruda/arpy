@@ -9,12 +9,12 @@ ser = serial.Serial('/dev/ttyACM0',9600)
 
 
 @app.route('/',methods=['POST', 'GET'])
-def msg():
-    msg = None
+def command():
+    cmd = None
     if request.method == 'POST':
-        msg = request.form['msg']
-        ser.write(msg)
-    return render_template('msg.html', msg=msg)
+        msg = request.form['cmd']
+        ser.write(cmd)
+    return render_template('cmd.html', cmd=cmd)
 
 
 
