@@ -1,9 +1,9 @@
 <!doctype html>
 <title>Hello to Arduino!</title>
-{% if msg %}
-  <h1>Msg: {{ msg }}!</h1>
+{% if cmd %}
+  <h1>Command: {{ cmd }}!</h1>
 {% endif %}
-<form action="{{ url_for('msg') }}" method="POST">
-    <input type="text" name="msg" value=""/>
+<form action="{{ url_for('command') }}" method="POST">
+    <input type="text" name="cmd" value=""/>
     <input type="submit" value="Enviar"/>
 </form>    
