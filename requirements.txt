@@ -1,0 +1,9 @@
+Flask==0.9
+Jinja2==2.6
+Pygments==1.6
+Werkzeug==0.8.3
+argparse==1.2.1
+bpython==0.12
+distribute==0.6.27
+pyserial==2.6
+wsgiref==0.1.2
